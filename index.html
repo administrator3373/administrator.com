@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Modern Website with Navbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="logo_img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf6zoRR_FPG7f2knECoYTgOuETejMYPg71vg&s" alt=""></h1>
+        <h1 class="logo">SCIENCE SPHERE</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="video.html">Video</a></li>
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+        </ul>
+        <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    </nav>
+
+    <!-- Sidebar (hidden in desktop mode) -->
+    <div class="sidebar" id="sidebar">
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+        <button class="close-btn" onclick="toggleSidebar()">✖</button>
+        <ul class="sidebar-links">
+            <li><a href="index.html" onclick="toggleSidebar()">Home</a></li>
+            <li><a href="#contact" onclick="toggleSidebar()">Contact</a></li>
+            <li><a href="video.html" onclick="toggleSidebar()">Video</a></li>
+        </ul>
+    </div>
+
+    <!-- Header / Hero Section -->
+    <header class="hero">
+        <h1>WELCOME TO SCIENCE SPHERE</h1>
+        <p>Discover our work and get in touch.</p>
+        <button class="cta-btn">View Our Course</button>
+        
+    </header>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <h2>My Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">Project 1</div>
+            <div class="portfolio-item">Project 2</div>
+            <div class="portfolio-item">Project 3</div>
+            <div class="portfolio-item">Project 4</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <div class="message-icon">
+        <a href="https://m.me/fahimkabirtamim" title="Message Me">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Message Icon">
+        </a>
+      </div>
+
+    <script>
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Sidebar Toggle
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
